@@ -11,10 +11,11 @@ const [like,setLike] = useState(false)
 
   return (
   
-<li>
+<li className="posts d-grid gap-2" >
     <h3>{question}</h3>
+    <hr />
     <p>{answer}</p>
-    {!like ? <button onClick={() => setLike(true)}><i class="ri-thumb-up-line"></i> Like</button> : <PostLiked />}
+    {!like ? <button className="btn btn-primary" type="button" onClick={() => setLike(true)}><i class="ri-thumb-up-line"></i> Like</button> : <PostLiked />}
 
 </li>
 )
